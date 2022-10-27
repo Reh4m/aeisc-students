@@ -23,7 +23,7 @@ Vue.use(ErrorPage);
 Vue.use(VueApollo);
 
 export const defaultClient = new ApolloClient({
-  uri: "https://share-images-reh4m.herokuapp.com/graphql",
+  uri: "https://aeisc-students-server.herokuapp.com//graphql",
   // include auth token with request made to backend
   fetchOptions: {
     credentials: "include",
