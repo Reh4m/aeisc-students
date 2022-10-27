@@ -1,0 +1,30 @@
+{
+  "name": "aeisc-students",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Aeisc students</h1>",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "cd client && npm run serve",
+    "dev": "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\"",
+    "start": "node server.js"
+  },
+  "author": "Reh4m",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.10.1",
+    "bcrypt": "^3.0.8",
+    "debug": "^4.3.4",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.6.0",
+    "graphql-tools": "^4.0.7",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.2.1",
+    "mongoose": "^5.9.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  },
+  "keywords": []
+}

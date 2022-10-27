@@ -1,0 +1,36 @@
+scalar Date
+
+type Admin {
+  _id: ID
+  username: String!
+  name: String!
+  email: String!
+  password: String!
+}
+
+type Student {
+  _id: ID
+  controlNumber: String!
+}
+
+type Query {
+  getCurrentAdmin: Admin
+  getAdmin(adminId: ID!): Admin!
+  getStudents: [Student]
+  getStudent(studentId: ID!): Student!
+}
+
+type Token {
+  token: String!
+}
+
+type Mutation {
+  signinAdmin(username: String!, password: String!): Token
+  signupAdmin(
+    username: String!
+    name: String!
+    email: String!
+    password: String!
+  ): Token
+  signupStudent(controlNumber: String!): Student!
+}
