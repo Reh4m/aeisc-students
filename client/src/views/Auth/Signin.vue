@@ -89,9 +89,9 @@ export default {
     ...mapGetters(["admin", "error", "loading"]),
   },
   watch: {
-    user(value) {
+    admin(value) {
       // if user value chancges from null to object, redirect to home page
-      if (value) this.$router.push("/");
+      if (value) this.$router.push("/admin");
     },
   },
   methods: {

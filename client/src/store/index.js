@@ -88,7 +88,7 @@ export default new Vuex.Store({
           localStorage.setItem("token", data.signinAdmin.token);
           // to make sure created methods is run in main.js
           // (we run getCurrentUser), reload the page
-          router.push("/admin");
+          router.go();
         })
         .catch((err) => {
           commit("setLoading", false);
@@ -98,7 +98,6 @@ export default new Vuex.Store({
     signupStudent: ({ commit }, payload) => {
       commit("clearError");
       commit("setLoading", true);
-      console.log("store");
       // clear token to prevent errors
       apolloClient
         .mutate({
@@ -129,6 +128,7 @@ export default new Vuex.Store({
   },
   getters: {
     students: (state) => state.students,
+    admin: (state) => state.admin,
     loading: (state) => state.loading,
     error: (state) => state.error,
     authError: (state) => state.authError,
