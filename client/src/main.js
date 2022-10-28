@@ -51,7 +51,7 @@ export const defaultClient = new ApolloClient({
           // set auth error in state (to show in snackbar)
           store.commit("setAuthError", err);
           // signout user (to clear token)
-          store.dispatch("signoutUser");
+          store.dispatch("signoutAdmin");
         }
       }
     }
@@ -68,5 +68,8 @@ new Vue({
   store,
   vuetify,
   render: (h) => h(App),
-  created() {},
+  created() {
+    // execute getCurrentUser query
+    this.$store.dispatch("getCurrentAdmin");
+  },
 }).$mount("#app");
