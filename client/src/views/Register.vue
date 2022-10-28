@@ -68,6 +68,7 @@ export default {
     controlNumber: "",
     controlNumberRules: [
       (controlNumber) => !!controlNumber || "Control number is required",
+      (v) => /^[0-9]*$/.test(v) || "Control number must be valid",
     ],
   }),
   computed: {
