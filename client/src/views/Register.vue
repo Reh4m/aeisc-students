@@ -2,6 +2,9 @@
   <v-container fluid>
     <v-row justify="center">
       <v-col cols="12" sm="8" md="4">
+        <v-container>
+          <v-img src="../assets/logo.png"></v-img>
+        </v-container>
         <v-card flat class="text-center">
           <v-card-text>
             <span class="display-1 font-weight-bold">
